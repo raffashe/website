@@ -4,11 +4,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class AnimatedIconButton extends StatefulWidget {
   final IconData iconData;
   final VoidCallback onTap;
+
   const AnimatedIconButton({
-    Key? key,
+    super.key,
     required this.iconData,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   State<AnimatedIconButton> createState() => _AnimatedIconButtonState();
@@ -16,10 +17,11 @@ class AnimatedIconButton extends StatefulWidget {
 
 class _AnimatedIconButtonState extends State<AnimatedIconButton> {
   bool isHovering = false;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: widget.onTap,
       onHover: (val) {
         setState(() {
           isHovering = val;
@@ -29,9 +31,7 @@ class _AnimatedIconButtonState extends State<AnimatedIconButton> {
         duration: const Duration(milliseconds: 300),
         decoration: BoxDecoration(
           color: isHovering ? Colors.grey.shade300 : Colors.white,
-          borderRadius: BorderRadius.circular(
-            12.0,
-          ),
+          borderRadius: BorderRadius.circular(12.0),
           border: Border.all(
             color: isHovering ? Colors.grey : Colors.white,
           ),

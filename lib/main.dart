@@ -12,18 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Raffashe',
+      title: 'Portfolio',
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        useMaterial3: true,
         canvasColor: Colors.purple.shade50,
+        useMaterial3: true,
         fontFamily: "custom",
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.purple.shade50,
-        ),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Colors.purple,
-        ),
       ),
       home: const Portfolio(),
     );

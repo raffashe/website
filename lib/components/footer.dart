@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/social_row.dart';
 
 class Footer extends StatelessWidget {
-  const Footer({Key? key}) : super(key: key);
+  const Footer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
             height: 10.0,
           ),
           Text(
-            "desiprogrammer",
+            "Raffashe",
           ),
         ],
       ),
