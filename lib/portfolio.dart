@@ -42,6 +42,7 @@ class _MyWidgetState extends State<Portfolio> {
           child: Column(
             children: [
               Wrap(
+                alignment: WrapAlignment.center,
                 children: [About(), Education()],
               )
             ],
