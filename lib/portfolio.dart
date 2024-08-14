@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:raffashe/components/about.dart';
+import 'package:raffashe/components/education.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -9,8 +11,14 @@ class Portfolio extends StatefulWidget {
 
 class _MyWidgetState extends State<Portfolio> {
   List<Widget> navItems = [
-    ElevatedButton(onPressed: () {}, child: const Text("Education")),
-    ElevatedButton(onPressed: () {}, child: const Text("Skills")),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(onPressed: () {}, child: const Text("Education")),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(onPressed: () {}, child: const Text("Skills")),
+    ),
   ];
 
   bool isMobile = false;
@@ -30,8 +38,14 @@ class _MyWidgetState extends State<Portfolio> {
                 ),
               )
             : null,
-        body: const Center(
-          child: Text("Portfolio"),
+        body: const SingleChildScrollView(
+          child: Column(
+            children: [
+              Wrap(
+                children: [About(), Education()],
+              )
+            ],
+          ),
         ));
   }
 }
