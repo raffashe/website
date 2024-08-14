@@ -19,17 +19,19 @@ class _MyWidgetState extends State<Portfolio> {
   Widget build(BuildContext context) {
     isMobile = MediaQuery.of(context).size.width > 700 ? false : true;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Raffaela de Castro"),
-        actions: isMobile ? null : navItems,
-      ),
-      drawer: isMobile
-          ? Drawer(
-              child: ListView(
-                children: navItems,
-              ),
-            )
-          : null,
-    );
+        appBar: AppBar(
+          title: const Text("Raffaela de Castro"),
+          actions: isMobile ? null : navItems,
+        ),
+        drawer: isMobile
+            ? Drawer(
+                child: ListView(
+                  children: navItems,
+                ),
+              )
+            : null,
+        body: const Center(
+          child: Text("Portfolio"),
+        ));
   }
 }
