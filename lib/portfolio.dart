@@ -2,6 +2,7 @@ import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart'; // Importe o FontAwesome
+import 'package:raffashe/components/projects.dart';
 
 import 'components/about.dart';
 import 'components/education.dart';
@@ -73,7 +74,7 @@ class _PortfolioState extends State<Portfolio> {
     isMobile = MediaQuery.of(context).size.width > 700 ? false : true;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Raffaela de Castro"),
+        //title: const Text("Raffaela de Castro"),
         actions: isMobile ? null : navItems,
       ),
       drawer: isMobile
@@ -92,8 +93,19 @@ class _PortfolioState extends State<Portfolio> {
                 spacing: 20.0,
                 runAlignment: WrapAlignment.center,
                 children: [
-                  About(),
-                  Education(),
+                  Column(
+                    children: [
+                      About(),
+                      SizedBox(height: 20), // Espaçamento entre as seções
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Education(),
+                      SizedBox(height: 20), // Espaçamento entre as seções
+                      Projects(), // Projects agora fica abaixo de Education
+                    ],
+                  ),
                 ],
               ),
               Skills(

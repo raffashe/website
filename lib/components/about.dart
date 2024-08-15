@@ -54,7 +54,7 @@ class _AboutState extends State<About> {
                 height: 156.0,
               ),
               const Text(
-                "Raffashe",
+                "Raffaela Castro",
                 style: TextStyle(
                   fontSize: 30.0,
                   fontWeight: FontWeight.w600,
@@ -63,7 +63,8 @@ class _AboutState extends State<About> {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  "Sou Engenheira de Computação e atualmente estou cursando uma pós-graduação em Neuroengenharia. Tenho experiência com Java e Kotlin, e atualmente estou trabalhando com Dart e Flutter para desenvolvimento multiplataforma. Também tenho conhecimento em Python com foco na criação de redes neurais",
+                  "Olá, sou a Raffaela uma profissional entusiasta e criativa na resolução de problemas por meio da programação. Tenho experiência com Java e Kotlin, e atualmente estou trabalhando com Dart e Flutter para desenvolvimento multiplataforma. Também tenho conhecimento em Python com foco na criação de redes neurais",
+                  style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.w300),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -108,9 +109,9 @@ class _AboutState extends State<About> {
               AnimatedContact(
                 iconData: FontAwesomeIcons.linkedin,
                 title: "Linkedin",
-                subtitle: "raffaela-castro-silva",
-                onTap: () => _launchURL(
-                    'https://www.linkedin.com/in/raffaela-castro-silva/'),
+                subtitle: "raffashe",
+                onTap: () =>
+                    _launchURL('https://www.linkedin.com/in/raffashe/'),
               ),
             ],
           ),
