@@ -25,19 +25,8 @@ class _PortfolioState extends State<Portfolio> {
   @override
   Widget build(BuildContext context) {
     isMobile = MediaQuery.of(context).size.width > 700 ? false : true;
-    return Scaffold(
-      appBar: AppBar(
-        //title: const Text("Raffaela de Castro"),
-        actions: isMobile ? null : navItems,
-      ),
-      drawer: isMobile
-          ? Drawer(
-              child: ListView(
-                children: navItems,
-              ),
-            )
-          : null,
-      body: const SingleChildScrollView(
+    return const Scaffold(
+      body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
