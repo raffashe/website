@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../../constants/colors.dart';
-import '../../constants/decoration_style.dart';
-import '../../constants/style_text.dart';
+import '../../../../core/constants/colors.dart';
+import '../../../../core/constants/decoration_style.dart';
+import '../../../../core/constants/style_text.dart';
 
 class Education extends StatefulWidget {
   const Education({super.key});

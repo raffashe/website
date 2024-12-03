@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:raffashe/presentation/screens/projects.dart';
+import 'package:raffashe/features/portfolio/presentation/screens/projects.dart';
 
 import 'screens/about.dart';
 import 'screens/education.dart';
-import '../widgets/footer.dart';
+import '../../../core/widgets/footer.dart';
 import 'screens/skills_screen.dart';
 
 class Portfolio extends StatefulWidget {

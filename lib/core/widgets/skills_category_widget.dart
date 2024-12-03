@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:raffashe/constants/style_text.dart';
+import 'package:raffashe/core/constants/style_text.dart';
 import '../constants/decoration_style.dart';
 
 class SkillsCategory extends StatelessWidget {

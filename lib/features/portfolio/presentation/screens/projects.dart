@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import '../../constants/decoration_style.dart';
-import '../../constants/style_text.dart';
-import '../../widgets/cards_widgets.dart';
+import '../../../../core/constants/decoration_style.dart';
+import '../../../../core/constants/style_text.dart';
+import '../../../../core/widgets/cards_widgets.dart';
 
 class Projects extends StatefulWidget {
   const Projects({super.key});

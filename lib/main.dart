@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:raffashe/constants/colors.dart';
+import 'package:raffashe/core/constants/colors.dart';
 import 'package:raffashe/splash/splash.dart';
 
 void main() {

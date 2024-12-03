@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../constants/skills_constants.dart';
-import '../../constants/style_text.dart';
-import '../../widgets/skills_category_widget.dart';
+import '../../../../core/constants/skills_constants.dart';
+import '../../../../core/constants/style_text.dart';
+import '../../../../core/widgets/skills_category_widget.dart';
 
 class Skills extends StatelessWidget {
   const Skills({super.key});

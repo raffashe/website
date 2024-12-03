@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:raffashe/constants/style_text.dart';
+import 'package:raffashe/core/constants/style_text.dart';
 import '../../constants/decoration_style.dart';
 
 class AnimatedContact extends StatefulWidget {

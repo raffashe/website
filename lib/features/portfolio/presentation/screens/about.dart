@@ -3,9 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../constants/animated_contact.dart';
-import '../../constants/style_text.dart';
-import '../../constants/decoration_style.dart';
+import '../../../../core/constants/animated_contact.dart';
+import '../../../../core/constants/style_text.dart';
+import '../../../../core/constants/decoration_style.dart';
 
 class About extends StatefulWidget {
   const About({super.key});
