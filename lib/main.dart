@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:raffashe/portfolio.dart';
+import 'package:raffashe/presentation/portfolio.dart';
+import 'package:raffashe/constants/colors.dart'; // Importando as cores
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +15,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Portfolio',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        canvasColor: Colors.purple.shade50,
+        primaryColor: AppColors.primary100,
+        canvasColor: AppColors.bg100,
+        scaffoldBackgroundColor: AppColors.bg200,
+        hintColor: AppColors.accent100,
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: AppColors.text200),
+          bodyMedium: TextStyle(color: AppColors.text100),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: AppColors.bg300,
+          iconTheme: IconThemeData(color: AppColors.text100),
+        ),
         useMaterial3: true,
         fontFamily: "custom",
       ),

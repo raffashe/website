@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:raffashe/constants/style_text.dart';
+import '../../constants/decoration_style.dart';
 
 class AnimatedContact extends StatefulWidget {
   final IconData iconData;
   final String title;
   final String subtitle;
   final VoidCallback onTap;
+
   const AnimatedContact({
     super.key,
     required this.iconData,
@@ -20,11 +23,11 @@ class AnimatedContact extends StatefulWidget {
 
 class _AnimatedContactState extends State<AnimatedContact> {
   bool isHovering = false;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: widget.onTap,
-      // Call the provided onTap function
       onHover: (val) {
         setState(() {
           isHovering = val;
@@ -32,15 +35,7 @@ class _AnimatedContactState extends State<AnimatedContact> {
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
-        decoration: BoxDecoration(
-          color: isHovering ? Colors.grey.shade300 : Colors.white,
-          borderRadius: BorderRadius.circular(
-            12.0,
-          ),
-          border: Border.all(
-            color: isHovering ? Colors.grey : Colors.white,
-          ),
-        ),
+        decoration: DecorationStyle.contactCardDecoration(isHovering),
         margin: const EdgeInsets.only(top: 10.0),
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -54,26 +49,19 @@ class _AnimatedContactState extends State<AnimatedContact> {
                 ),
               ),
             ),
-            //
             const SizedBox(
               width: 12.0,
             ),
-            //
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   widget.title,
-                  style: const TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: TextStylesConst.itemTitleStyle,
                 ),
                 Text(
                   widget.subtitle,
-                  style: const TextStyle(
-                    fontSize: 14.0,
-                  ),
+                  style: TextStylesConst.subtitleTextStyle,
                 ),
               ],
             ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import '../../constants/colors.dart';
+import '../../constants/decoration_style.dart';
+import '../../constants/style_text.dart';
 
 class Education extends StatefulWidget {
   const Education({super.key});
@@ -41,20 +44,14 @@ class _EducationState extends State<Education> {
     return Container(
       margin: const EdgeInsets.only(top: 20.0),
       width: containerWidth,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20.0),
-      ),
+      decoration: DecorationStyle.containerDecoration(0.8),
       padding: const EdgeInsets.all(30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
             "Educação",
-            style: TextStyle(
-              fontSize: 24.0,
-              fontWeight: FontWeight.w600,
-            ),
+            style: TextStylesConst.titleStyle,
           ),
           const SizedBox(height: 12.0),
           ListView.builder(
@@ -65,6 +62,10 @@ class _EducationState extends State<Education> {
               final education = educationDetails[index];
               return Card(
                 margin: const EdgeInsets.symmetric(vertical: 8.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                color: AppColors.bg300, // Fundo bg300
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
@@ -72,23 +73,20 @@ class _EducationState extends State<Education> {
                     children: [
                       Text(
                         education['year']!,
-                        style: const TextStyle(
-                          fontSize: 10.0,
-                          color: Colors.indigo,
+                        style: TextStylesConst.yearStyle.copyWith(
+                          color: AppColors.primary100, // Texto primary100
                         ),
                       ),
                       Text(
                         education['title']!,
-                        style: const TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.w600,
+                        style: TextStylesConst.itemTitleStyle.copyWith(
+                          color: AppColors.primary100, // Texto primary100
                         ),
                       ),
                       Text(
                         education['description']!,
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          color: Colors.grey.shade700,
+                        style: TextStylesConst.descriptionStyle.copyWith(
+                          color: AppColors.primary100, // Texto primary100
                         ),
                       ),
                     ],

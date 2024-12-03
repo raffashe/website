@@ -3,8 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../utils/animated_contact.dart';
-import '../utils/social_row.dart';
+import '../../constants/animated_contact.dart';
+import '../../constants/style_text.dart';
+import '../../constants/decoration_style.dart';
 
 class About extends StatefulWidget {
   const About({super.key});
@@ -23,9 +24,11 @@ class _AboutState extends State<About> {
         throw 'Não foi possível abrir o link: $url';
       }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.toString())),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(e.toString())),
+        );
+      }
     }
   }
 
@@ -38,10 +41,7 @@ class _AboutState extends State<About> {
           : context.screenWidth < 1600
               ? context.screenWidth * 0.4
               : context.screenWidth * 0.2,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20.0),
-      ),
+      decoration: DecorationStyle.containerDecoration(0.8),
       padding: const EdgeInsets.all(30.0),
       height: 800.0,
       child: Column(
@@ -55,17 +55,13 @@ class _AboutState extends State<About> {
               ),
               const Text(
                 "Raffaela Castro",
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStylesConst.nameStyle,
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  "Olá, sou a Raffaela uma profissional entusiasta e criativa na resolução de problemas por meio da programação. Tenho experiência com Java e Kotlin, e atualmente estou trabalhando com Dart e Flutter para desenvolvimento multiplataforma. Também tenho conhecimento em Python com foco na criação de redes neurais",
-                  style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.w300),
-                  textAlign: TextAlign.center,
+                  "Engenheira de Computação com pós-graduação em Neurorrobótica, especializada no desenvolvimento de soluções inovadoras na interseção entre neurociência e tecnologia. Focada no desenvolvimento multiplataforma usando Flutter, com conhecimento em Dart e Kotlin, crio aplicativos móveis intuitivos e eficientes. Também exploro visão computacional e busco aplicar inteligência artificial para aprimorar a interação humano-máquina.",
+                  style: TextStylesConst.descriptionStyle,
                 ),
               ),
               const Wrap(
@@ -75,26 +71,24 @@ class _AboutState extends State<About> {
                 children: [
                   Chip(
                     label: Text(
-                      "Engenheira da Computação",
+                      "Computer Engineer",
+                      style: TextStylesConst.chipLabelStyle,
                     ),
-                    labelStyle: TextStyle(color: Colors.white),
-                    backgroundColor: Colors.green,
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
                     padding: EdgeInsets.all(8.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      side: BorderSide(color: Colors.green),
                     ),
                   ),
                   Chip(
                     label: Text(
                       "Mobile Developer",
+                      style: TextStylesConst.chipLabelStyle,
                     ),
-                    labelStyle: TextStyle(color: Colors.white),
-                    backgroundColor: Colors.green,
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
                     padding: EdgeInsets.all(8.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      side: BorderSide(color: Colors.green),
                     ),
                   ),
                 ],
@@ -113,12 +107,6 @@ class _AboutState extends State<About> {
                 onTap: () =>
                     _launchURL('https://www.linkedin.com/in/raffashe/'),
               ),
-            ],
-          ),
-          const Column(
-            children: [
-              Divider(),
-              SocialRow(),
             ],
           ),
         ],
