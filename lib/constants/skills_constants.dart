@@ -1,9 +1,7 @@
 const List<String> programmingLanguages = [
   "Dart",
   "Kotlin",
-  "Java",
   "Python",
-  "C++",
 ];
 
 const List<String> frameworks = [
@@ -23,11 +21,8 @@ const List<String> otherTools = [
   "SQL Server",
   "RESTful APIs",
   "Git",
-  "GitHub",
   "GitLab",
   "Azure DevOps",
-  "Jenkins",
-  "Scrum",
   "Kanban",
   "TestFlight",
   "Mockito",

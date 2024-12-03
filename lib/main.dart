@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:raffashe/presentation/portfolio.dart';
-import 'package:raffashe/constants/colors.dart'; // Importando as cores
+import 'package:raffashe/constants/colors.dart';
+import 'package:raffashe/splash/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Portfolio',
+      title: 'Raffashe',
       theme: ThemeData(
         primaryColor: AppColors.primary100,
         canvasColor: AppColors.bg100,
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: "custom",
       ),
-      home: const Portfolio(),
+      home: const SplashScreen(),
     );
   }
 }

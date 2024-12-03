@@ -26,10 +26,10 @@ class _EducationState extends State<Education> {
           'Concluído o Bacharelado em Engenharia da Computação na UNICEUMA.',
     },
     {
-      'year': '2024 - Presente',
-      'title': 'Especialização em Neuroengenharia',
+      'year': '2024',
+      'title': 'Pós Graduação em Neurorobótica',
       'description':
-          'Especialização em Neuroengenharia e Neurorobótica na Unyleya, com foco em soluções tecnológicas acessíveis.',
+          'Pós em Neuroengenharia e Neurorobótica na Unyleya, com foco em soluções tecnológicas acessíveis.',
     }
   ];
 
