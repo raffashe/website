@@ -97,13 +97,13 @@ class _AboutState extends State<About> {
               AnimatedContact(
                 iconData: FontAwesomeIcons.github,
                 title: "Github",
-                subtitle: "raffashe",
+                subtitle: "github.com/raffashe",
                 onTap: () => _launchURL('https://github.com/raffashe'),
               ),
               AnimatedContact(
                 iconData: FontAwesomeIcons.linkedin,
                 title: "Linkedin",
-                subtitle: "raffashe",
+                subtitle: "linkedin.com/in/raffashe/",
                 onTap: () =>
                     _launchURL('https://www.linkedin.com/in/raffashe/'),
               ),

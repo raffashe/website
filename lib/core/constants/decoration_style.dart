@@ -4,7 +4,7 @@ import 'package:raffashe/core/constants/colors.dart';
 class DecorationStyle {
   static BoxDecoration containerDecoration(double opacity) {
     return BoxDecoration(
-      color: AppColors.bg200.withOpacity(opacity),
+      color: AppColors.bg100.withOpacity(opacity),
       borderRadius: BorderRadius.circular(20.0),
       boxShadow: [
         BoxShadow(
