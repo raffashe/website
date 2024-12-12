@@ -1,21 +1,21 @@
 # Responsive portfolio in Flutter
 
-Este é o código-fonte do meu site de portfólio pessoal desenvolvido com Flutter. Ele foi projetado para ser uma interface visual elegante e responsiva, exibindo informações sobre minhas habilidades, projetos e experiência.
+This is the source code for my personal portfolio website developed with Flutter. It is designed to be an elegant and responsive visual interface, showcasing information about my skills, projects, and experience.
 
 ![cover](https://github.com/user-attachments/assets/8f36fde0-8dd0-4478-8fcd-723231ddf0f8)
 
 
-## Funcionalidades
+## Features
 
-- **Página de Apresentação:** Uma introdução clara com uma animação chamativa.
-- **Seção de Projetos:** Mostra os projetos mais recentes, com links para mais detalhes.
-- **Habilidades:** Exibe habilidades organizadas por categorias.
-- **Contato:** Inclui um formulário de contato funcional e links para redes sociais.
-- **Design Responsivo:** Adaptável para dispositivos móveis, tablets e desktops.
+- **Introduction Page:** A clear introduction with an eye-catching animation.
+- **Projects Section:** Displays the most recent projects, with links for more details.
+- **Skills:** Displays skills organized by categories.
+- **Contact:** Includes a functional contact form and links to social media.
+- **Responsive Design:** Adaptable for mobile devices, tablets, and desktops.
 
-## Estrutura do Projeto
+## Project Structure
 
-A estrutura do projeto é organizada da seguinte forma:
+The project structure is organized as follows:
 
 ```
 lib/
@@ -30,46 +30,46 @@ lib/
 └── main.dart
 ```
 
-### Pastas Principais
+### Main Folders
 
-- **core:** Contém constantes, estilos e utilitários globais.
-- **features:** Inclui as telas principais do portfólio.
-- **splash:** Configuração da tela inicial de carregamento.
-- **assets:** Inclui fontes, imagens e outros recursos.
+- **core:** Contains global constants, styles, and utilities.
+- **features:** Includes the main portfolio screens.
+- **splash:** Configuration for the loading splash screen.
+- **assets:** Includes fonts, images, and other resources.
 
-## Configuração
+## Setup
 
-Certifique-se de que você tem o Flutter instalado corretamente. Em seguida, siga as instruções abaixo:
+Make sure you have Flutter installed correctly. Then, follow the steps below:
 
-1. Clone o repositório:
+1. Clone the repository:
    ```bash
    git clone https://github.com/raffashe/website.git
    ```
-2. Acesse o diretório do projeto:
+2. Navigate to the project directory:
    ```bash
    cd raffashe
    ```
-3. Instale as dependências:
+3. Install dependencies:
    ```bash
    flutter pub get
    ```
-4. Execute o projeto:
+4. Run the project:
    ```bash
    flutter run
    ```
 
-## Dependências
+## Dependencies
 
-As principais dependências utilizadas no projeto são:
+The main dependencies used in the project are:
 
-- [flutter](https://flutter.dev/) - Framework base.
-- [velocity_x](https://pub.dev/packages/velocity_x) - Ajuda com widgets e estilos.
-- [timelines](https://pub.dev/packages/timelines) - Criar linhas do tempo estilizadas.
-- [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) - Ícones de Font Awesome.
-- [url_launcher](https://pub.dev/packages/url_launcher) - Abrir URLs ou apps externos.
-- [flutter_svg](https://pub.dev/packages/flutter_svg) - Renderizar arquivos SVG.
+- [flutter](https://flutter.dev/) - Core framework.
+- [velocity_x](https://pub.dev/packages/velocity_x) - Helps with widgets and styles.
+- [timelines](https://pub.dev/packages/timelines) - Create stylized timelines.
+- [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) - Font Awesome icons.
+- [url_launcher](https://pub.dev/packages/url_launcher) - Open URLs or external apps.
+- [flutter_svg](https://pub.dev/packages/flutter_svg) - Render SVG files.
 
 ---
 
-Desenvolvido com ❤️ e Flutter.
+Developed with ❤️ and Flutter.
 ``` 
