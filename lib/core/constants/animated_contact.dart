@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:raffashe/core/constants/style_text.dart';
 
 import 'decoration_style.dart';
 
@@ -57,16 +58,11 @@ class _AnimatedContactState extends State<AnimatedContact> {
               children: [
                 Text(
                   widget.title,
-                  style: const TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: TextStylesConst.titleTextStyle,
                 ),
                 Text(
                   widget.subtitle,
-                  style: const TextStyle(
-                    fontSize: 14.0,
-                  ),
+                  style: TextStylesConst.subtitleTextStyle,
                 ),
               ],
             ),

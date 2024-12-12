@@ -43,7 +43,7 @@ class _AboutState extends State<About> {
               : context.screenWidth * 0.2,
       decoration: DecorationStyle.containerDecoration(0.8),
       padding: const EdgeInsets.all(30.0),
-      height: 800.0,
+      height: 925.0,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -97,13 +97,13 @@ class _AboutState extends State<About> {
               AnimatedContact(
                 iconData: FontAwesomeIcons.github,
                 title: "Github",
-                subtitle: "raffashe",
+                subtitle: "github.com/raffashe",
                 onTap: () => _launchURL('https://github.com/raffashe'),
               ),
               AnimatedContact(
                 iconData: FontAwesomeIcons.linkedin,
                 title: "Linkedin",
-                subtitle: "raffashe",
+                subtitle: "linkedin.com/in/raffashe/",
                 onTap: () =>
                     _launchURL('https://www.linkedin.com/in/raffashe/'),
               ),
