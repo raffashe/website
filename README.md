@@ -72,4 +72,3 @@ The main dependencies used in the project are:
 ---
 
 Developed with ❤️ and Flutter.
-``` 
