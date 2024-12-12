@@ -4,8 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../constants/style_text.dart';
 import '../constants/colors.dart';
+import '../constants/decoration_style.dart';
 
-class ProjectCard extends StatelessWidget {
+class ProjectCard extends StatefulWidget {
   final String title;
   final String description;
   final String image;
@@ -19,11 +20,18 @@ class ProjectCard extends StatelessWidget {
     required this.url,
   });
 
+  @override
+  State<ProjectCard> createState() => _ProjectCardState();
+}
+
+class _ProjectCardState extends State<ProjectCard> {
+  bool isHovering = false;
+
   // Método para abrir o link
   Future<void> _launchUrl() async {
-    final Uri uri = Uri.parse(url);
+    final Uri uri = Uri.parse(widget.url);
     if (!await launchUrl(uri)) {
-      throw 'Could not launch $url';
+      throw 'Could not launch ${widget.url}';
     }
   }
 
@@ -31,19 +39,22 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: _launchUrl,
-      child: Card(
+      onHover: (val) {
+        setState(() {
+          isHovering = val;
+        });
+      },
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        decoration: DecorationStyle.contactCardDecoration(isHovering),
         margin: const EdgeInsets.symmetric(vertical: 8.0),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-        ),
-        color: AppColors.bg300,
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SvgPicture.asset(
-                image,
+                widget.image,
                 width: 50.0,
                 height: 50.0,
               ),
@@ -53,13 +64,13 @@ class ProjectCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      title,
+                      widget.title,
                       style: TextStylesConst.itemTitleStyle.copyWith(
                         color: AppColors.primary100, // Cor do título
                       ),
                     ),
                     Text(
-                      description,
+                      widget.description,
                       style: TextStylesConst.descriptionStyle.copyWith(
                         color: AppColors.primary100, // Cor da descrição
                       ),

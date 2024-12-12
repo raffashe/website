@@ -14,10 +14,10 @@ class Education extends StatefulWidget {
 class _EducationState extends State<Education> {
   final List<Map<String, String>> educationDetails = [
     {
-      'year': '2014 - 2016',
-      'title': 'Ensino Técnico',
+      'year': '2024',
+      'title': 'Pós Graduação em Neurorobótica',
       'description':
-          'Curso técnico concomitante ao ensino médio no Instituto Federal em Desenvolvimento Web',
+          'Pós em Neuroengenharia e Neurorobótica na Unyleya, com foco em soluções tecnológicas acessíveis.',
     },
     {
       'year': '2016 - 2021',
@@ -26,10 +26,10 @@ class _EducationState extends State<Education> {
           'Concluído o Bacharelado em Engenharia da Computação na UNICEUMA.',
     },
     {
-      'year': '2024',
-      'title': 'Pós Graduação em Neurorobótica',
+      'year': '2014 - 2016',
+      'title': 'Ensino Técnico',
       'description':
-          'Pós em Neuroengenharia e Neurorobótica na Unyleya, com foco em soluções tecnológicas acessíveis.',
+          'Curso técnico concomitante ao ensino médio no Instituto Federal em Desenvolvimento Web',
     }
   ];
 

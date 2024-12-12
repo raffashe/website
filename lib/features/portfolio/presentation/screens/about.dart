@@ -43,7 +43,7 @@ class _AboutState extends State<About> {
               : context.screenWidth * 0.2,
       decoration: DecorationStyle.containerDecoration(0.8),
       padding: const EdgeInsets.all(30.0),
-      height: 800.0,
+      height: 925.0,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
