@@ -1,6 +1,9 @@
-# Raffashe - Portfólio
+# Responsive portfolio in Flutter
 
 Este é o código-fonte do meu site de portfólio pessoal desenvolvido com Flutter. Ele foi projetado para ser uma interface visual elegante e responsiva, exibindo informações sobre minhas habilidades, projetos e experiência.
+
+![cover](https://github.com/user-attachments/assets/8f36fde0-8dd0-4478-8fcd-723231ddf0f8)
+
 
 ## Funcionalidades
 
