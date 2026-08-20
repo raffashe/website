@@ -1,80 +1,70 @@
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
-import '../../../../core/constants/decoration_style.dart';
-import '../../../../core/constants/style_text.dart';
-import '../../../../core/widgets/cards_widgets.dart';
 
-class Projects extends StatefulWidget {
+import '../../../../core/models/project_entry.dart';
+import '../../../../core/utils/portfolio_layout.dart';
+import '../../../../core/widgets/cards_widgets.dart';
+import '../../../../design_system/components/ds_text.dart';
+import '../../../../design_system/tokens/ds_spacing.dart';
+import '../../../../l10n/app_localizations.dart';
+
+class Projects extends StatelessWidget {
   const Projects({super.key});
 
-  @override
-  State<Projects> createState() => _ProjectsState();
-}
-
-class _ProjectsState extends State<Projects> {
-  final List<Map<String, String>> projectDetails = [
-    {
-      'title': 'Chat',
-      'description':
-          'É uma aplicação de chat em tempo real integrado ao Firebase',
-      'image': 'assets/chat.svg',
-      'url': 'https://github.com/raffashe/chat_online',
-    },
-    {
-      'title': 'DetectorPy',
-      'description':
-          'É um projeto de detecção de objetos em tempo real usando o modelo YOLOv8',
-      'image': 'assets/DetectorPy.svg',
-      'url': 'https://github.com/raffashe/DetectorPy',
-    },
-    {
-      'title': 'Popcorn',
-      'description':
-          'Popcorn é um aplicativo de filmes que permite favoritar, dar feedback, armazenar preferências localmente e exibir resultados em cards.',
-      'image': 'assets/PopCorn.svg',
-      'url': 'https://github.com/raffashe/popcorn',
-    },
-    {
-      'title': 'FaceRecPy',
-      'description':
-          'FaceRecPy é um projeto simples de detecção facial usando Python, OpenCV, Mediapipe e a biblioteca CVZone',
-      'image': 'assets/FaceRecPy.svg',
-      'url': 'https://github.com/raffashe/FaceRecPy',
-    }
-  ];
+  List<ProjectEntry> _projects(AppLocalizations l10n) {
+    return [
+      ProjectEntry(
+        title: 'Chat',
+        description: l10n.projectChatDescription,
+        image: 'assets/chat.svg',
+        url: 'https://github.com/raffashe/chat_online',
+      ),
+      ProjectEntry(
+        title: 'DetectorPy',
+        description: l10n.projectDetectorPyDescription,
+        image: 'assets/DetectorPy.svg',
+        url: 'https://github.com/raffashe/DetectorPy',
+      ),
+      ProjectEntry(
+        title: 'Popcorn',
+        description: l10n.projectPopcornDescription,
+        image: 'assets/PopCorn.svg',
+        url: 'https://github.com/raffashe/popcorn',
+      ),
+      ProjectEntry(
+        title: 'FaceRecPy',
+        description: l10n.projectFaceRecPyDescription,
+        image: 'assets/FaceRecPy.svg',
+        url: 'https://github.com/raffashe/FaceRecPy',
+      ),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
-    final containerWidth = context.screenWidth < 900
-        ? context.screenWidth * 0.9
-        : context.screenWidth < 1600
-            ? context.screenWidth * 0.5
-            : context.screenWidth * 0.4;
+    final l10n = AppLocalizations.of(context);
+    final projects = _projects(l10n);
 
-    return Container(
-      margin: const EdgeInsets.only(top: 20.0),
-      width: containerWidth,
-      decoration: DecorationStyle.containerDecoration(0.8),
-      padding: const EdgeInsets.all(30.0),
+    return SizedBox(
+      width: portfolioWideWidth(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Projetos",
-            style: TextStylesConst.titleStyle,
+          DSText(
+            l10n.projectsTitle,
+            typography: DSTextStyle.headerLarge,
           ),
-          const SizedBox(height: 12.0),
+          const SizedBox(height: DSSpacing.v12),
           ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            itemCount: projectDetails.length,
+            itemCount: projects.length,
             itemBuilder: (context, index) {
-              final project = projectDetails[index];
+              final project = projects[index];
               return ProjectCard(
-                title: project['title']!,
-                description: project['description']!,
-                image: project['image']!,
-                url: project['url']!,
+                title: project.title,
+                description: project.description,
+                image: project.image,
+                url: project.url,
               );
             },
           ),

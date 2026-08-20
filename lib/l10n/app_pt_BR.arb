@@ -1,0 +1,101 @@
+{
+  "@@locale": "pt_BR",
+
+  "appTitle": "Raffaela Castro — Portfólio",
+  "languageEnglish": "English",
+  "languagePortuguese": "Português",
+  "errorCouldNotOpenLink": "Não foi possível abrir o link: {url}",
+  "@errorCouldNotOpenLink": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+
+  "splashWelcome": "Bem-vinda ao meu portfólio.",
+  "splashAuthor": "Por Raffaela Castro",
+
+  "heroName": "Raffaela Castro",
+  "heroTitle": "Engenheira de Software",
+  "heroSubtitle": "Foco em Mobile Engineering com Flutter e Dart, construindo produtos confiáveis com arquitetura sólida, integração com backend e observabilidade.",
+  "heroChipSoftwareEngineer": "Engenheira de Software",
+  "heroChipMobileEngineering": "Mobile Engineering",
+
+  "aboutTitle": "Sobre",
+  "aboutDescription": "Engenheira de Computação e Engenheira de Software com foco em Mobile Engineering. Atualmente atuo na Serasa Experian como Engenheira de Software II, desenvolvendo e evoluindo produtos mobile com Flutter, Clean Architecture e Cubit.\n\nEntrei como Engenheira de Software I e evolui para um nível mid-level com maior autonomia, participação em decisões técnicas e colaboração com backend, QA e produto.\n\nMinha trajetória inclui integrações nativas, visão computacional e trabalho mobile com forte interface com backend. Busco evoluir para Senior Software Engineer e ampliar meu impacto em arquitetura, cloud e sistemas distribuídos — mantendo Mobile Engineering como foco central.",
+
+  "experienceTitle": "Experiência Profissional",
+
+  "experienceSerasaSe2Role": "Engenheira de Software II / Mobile Engineer",
+  "experienceSerasaSe2Period": "2025 — Atual",
+  "experienceSerasaSe2Summary": "Mobile Engineer atuando no desenvolvimento e evolução de produtos mobile em produção com Flutter e Dart.",
+  "experienceSerasaSe2Highlights": "• Flutter / Dart\n• Clean Architecture\n• Cubit\n• BFF e REST APIs\n• Observabilidade com Datadog\n• Firebase Crashlytics / Analytics\n• Acessibilidade e Design System\n• Colaboração com Backend, QA e Produto\n• Discussões técnicas e crescente ownership",
+
+  "experienceSerasaSe1Role": "Engenheira de Software I / Mobile Engineer",
+  "experienceSerasaSe1Period": "Cargo anterior na Serasa Experian",
+  "experienceSerasaSe1Summary": "Início da trajetória profissional na Serasa Experian desenvolvendo e evoluindo aplicações mobile com Flutter.",
+  "experienceSerasaSe1Highlights": "• Flutter / Dart\n• UI mobile e user flows\n• Integração com APIs\n• Clean Architecture\n• Modularização\n• Acessibilidade\n• Desenvolvimento mobile em produção",
+
+  "experiencePixForceRole": "Desenvolvedora de Aplicações / Mobile Engineer",
+  "experiencePixForcePeriod": "Projetos mobile avançados e visão computacional",
+  "experiencePixForceSummary": "Mobile Engineer em projetos técnicos avançados com Flutter, integrações nativas, visão computacional e sistemas em tempo real.",
+  "experiencePixForceHighlights": "• Visão computacional integrada a aplicações mobile\n• OpenCV e ROS\n• Streaming e processamento de imagens em tempo real\n• Integrações nativas Android/iOS\n• Plugins Flutter e Method Channels\n• Aplicativo para smartwatch integrado a plataforma web externa\n• Sistemas embarcados e monitoramento de dados em tempo real\n• Processamento de imagens com IA",
+
+  "experienceEscolaDeGenteRole": "Desenvolvedora de Aplicações / Mobile Engineer",
+  "experienceEscolaDeGentePeriod": "Vem Cá · Acessibilidade",
+  "experienceEscolaDeGenteSummary": "Mobile Engineer no app Vem Cá, com foco em acessibilidade e tecnologia inclusiva em produção.",
+  "experienceEscolaDeGenteHighlights": "• Migração/reconstrução de Xamarin para Flutter\n• Acessibilidade digital\n• UX/UI acessível\n• Tecnologia inclusiva\n• Aplicação mobile em produção\n• Flutter",
+
+  "experienceAcconTechRole": "Desenvolvedora de Aplicações / Mobile Engineer",
+  "experienceAcconTechPeriod": "Software house — cliente internacional",
+  "experienceAcconTechSummary": "Mobile Engineer em aplicação Flutter para cliente internacional, com recursos em tempo real e funcionalidades baseadas em localização.",
+  "experienceAcconTechHighlights": "• Flutter\n• Integração REST/API\n• Chat em tempo real com WebSockets\n• Mapas dinâmicos / Google Maps\n• Geolocalização\n• Filtros por distância\n• Perfis de usuário\n• Autenticação\n• Funcionalidades de assinatura",
+
+  "experienceInfogenesesRole": "Desenvolvedora de Software / Mobile Engineer",
+  "experienceInfogenesesPeriod": "Primeira experiência após a graduação",
+  "experienceInfogenesesSummary": "Mobile Engineer entregando aplicações Flutter com arquitetura, integrações e coordenação técnica.",
+  "experienceInfogenesesHighlights": "• Flutter\n• Desenvolvimento de aplicações mobile\n• Arquitetura de software\n• CI/CD\n• Integração com bancos de dados\n• Integrações bancárias\n• Liderança / coordenação técnica\n• Análise de requisitos",
+
+  "experienceInternshipCompany": "Experiência acadêmica",
+  "experienceInternshipRole": "Estagiária em Desenvolvimento de Software",
+  "experienceInternshipPeriod": "Durante a graduação",
+  "experienceInternshipSummary": "Estágio obrigatório em desenvolvimento de software durante a graduação em Engenharia da Computação.",
+
+  "experienceAcademicFrontendCompany": "Projeto acadêmico / startup",
+  "experienceAcademicFrontendRole": "Frontend Engineer",
+  "experienceAcademicFrontendPeriod": "Projeto acadêmico",
+  "experienceAcademicFrontendSummary": "Desenvolvimento frontend com HTML5, CSS3, JavaScript, Node.js e Figma.",
+
+  "projectsTitle": "Projetos Selecionados",
+  "projectChatDescription": "Aplicação de chat em tempo real integrada ao Firebase.",
+  "projectDetectorPyDescription": "Projeto de detecção de objetos em tempo real usando o modelo YOLOv8.",
+  "projectPopcornDescription": "App de filmes para descobrir títulos, favoritar, dar feedback, armazenar preferências localmente e exibir resultados em cards.",
+  "projectFaceRecPyDescription": "Projeto de detecção facial usando Python, OpenCV, MediaPipe e CVZone.",
+
+  "skillsTitle": "Skills Técnicas",
+  "skillsCategoryCoreMobile": "Core & Mobile",
+  "skillsCategoryArchitecture": "Arquitetura",
+  "skillsCategoryBackendCloud": "Backend & Cloud",
+  "skillsCategoryObservability": "Observabilidade",
+  "skillsCategoryAiComputerVision": "IA & Visão Computacional",
+  "skillsCategoryDevOps": "Desenvolvimento & DevOps",
+
+  "educationTitle": "Formação",
+  "educationBachelorPeriod": "2016 — 2021",
+  "educationBachelorTitle": "Bacharelado em Engenharia da Computação",
+  "educationBachelorDescription": "Universidade CEUMA",
+  "educationPostgradPeriod": "2024",
+  "educationPostgradTitle": "Pós-graduação em Neurociência, Neuroengenharia e Neurorrobótica",
+  "educationPostgradDescription": "Unyleya",
+  "educationTechnicalPeriod": "2014 — 2016",
+  "educationTechnicalTitle": "Ensino Técnico em Desenvolvimento Web",
+  "educationTechnicalDescription": "Instituto Federal de Educação, Ciência e Tecnologia do Maranhão (IFMA)",
+
+  "contactTitle": "Contato",
+  "contactGithub": "GitHub",
+  "contactGithubHandle": "github.com/raffashe",
+  "contactLinkedin": "LinkedIn",
+  "contactLinkedinHandle": "linkedin.com/in/raffashe/",
+  "footerBrand": "Raffaela Castro"
+}
