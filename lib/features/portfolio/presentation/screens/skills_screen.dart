@@ -1,40 +1,54 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/constants/skills_constants.dart';
-import '../../../../core/constants/style_text.dart';
 import '../../../../core/widgets/skills_category_widget.dart';
+import '../../../../design_system/components/ds_text.dart';
+import '../../../../design_system/tokens/ds_spacing.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class Skills extends StatelessWidget {
   const Skills({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+
     return Wrap(
-      spacing: 20.0,
-      runSpacing: 20.0,
+      spacing: DSSpacing.v20,
+      runSpacing: DSSpacing.v20,
       alignment: WrapAlignment.center,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(vertical: 20.0),
+          padding: const EdgeInsets.symmetric(vertical: DSSpacing.v20),
           alignment: Alignment.center,
-          child: const Text(
-            "Minhas Skills",
-            style: TextStylesConst.titleStyle,
+          child: DSText(
+            l10n.skillsTitle,
+            typography: DSTextStyle.headerLarge,
           ),
         ),
-        const SkillsCategory(
-          title: "Linguagem de Programação",
-          items: programmingLanguages,
-          color: Colors.indigo,
+        SkillsCategory(
+          title: l10n.skillsCategoryCoreMobile,
+          items: coreMobileSkills,
         ),
-        const SkillsCategory(
-          title: "Frameworks",
-          items: frameworks,
-          color: Colors.cyan,
+        SkillsCategory(
+          title: l10n.skillsCategoryArchitecture,
+          items: architectureSkills,
         ),
-        const SkillsCategory(
-          title: "Outras Ferramentas",
-          items: otherTools,
-          color: Color.fromARGB(255, 0, 0, 0),
+        SkillsCategory(
+          title: l10n.skillsCategoryBackendCloud,
+          items: backendCloudSkills,
+        ),
+        SkillsCategory(
+          title: l10n.skillsCategoryObservability,
+          items: observabilitySkills,
+        ),
+        SkillsCategory(
+          title: l10n.skillsCategoryAiComputerVision,
+          items: aiComputerVisionSkills,
+        ),
+        SkillsCategory(
+          title: l10n.skillsCategoryDevOps,
+          items: devOpsSkills,
         ),
       ],
     );

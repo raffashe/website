@@ -1,11 +1,17 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
 
-import '../core/constants/colors.dart';
-import '../features/portfolio/presentation/portfolio.dart';
+import 'package:flutter/material.dart';
+import 'package:raffashe/core/constants/colors.dart';
+import 'package:raffashe/core/locale/locale_controller.dart';
+import 'package:raffashe/core/theme/theme_mode_controller.dart';
+import 'package:raffashe/features/portfolio/presentation/portfolio.dart';
+import 'package:raffashe/l10n/app_localizations.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({super.key, required this.localeController, required this.themeModeController});
+
+  final LocaleController localeController;
+  final ThemeModeController themeModeController;
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -31,7 +37,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const Portfolio()),
+            MaterialPageRoute(
+              builder: (context) => Portfolio(
+                localeController: widget.localeController,
+                themeModeController: widget.themeModeController,
+              ),
+            ),
           );
         }
       });
@@ -40,30 +51,33 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void dispose() {
-    super.dispose();
     _timer?.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Welcome to my portfolio. Have fun!',
-              style: TextStyle(
+            Text(
+              l10n.splashWelcome,
+              style: const TextStyle(
                 fontSize: 36,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
-            const Text(
-              'By Raffaela Castro',
-              style: TextStyle(
+            Text(
+              l10n.splashAuthor,
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
                 color: AppColors.text200,

@@ -1,49 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:raffashe/core/constants/style_text.dart';
-import '../constants/decoration_style.dart';
+import '../../design_system/components/ds_card.dart';
+import '../../design_system/components/ds_chip.dart';
+import '../../design_system/components/ds_text.dart';
+import '../../design_system/tokens/ds_spacing.dart';
 
 class SkillsCategory extends StatelessWidget {
   final String title;
   final List<String> items;
-  final Color color;
-
   const SkillsCategory({
     super.key,
     required this.title,
     required this.items,
-    required this.color,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: context.screenWidth < 900
           ? context.screenWidth * 0.9
           : ((context.screenWidth * 0.7) / 3),
-      decoration: DecorationStyle.containerDecoration(0.8),
-      padding: const EdgeInsets.all(28.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: TextStylesConst.titleStyle,
-          ),
-          const Divider(),
-          Wrap(
-            spacing: 8.0,
-            runSpacing: 8.0,
-            children: items
-                .map((item) => Chip(
-                      label: Text(item),
-                      labelStyle: TextStyle(color: color),
-                      side: BorderSide(color: color),
-                      backgroundColor: Colors.white,
-                    ))
-                .toList(),
-          ),
-        ],
+      child: DSCard(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            DSText(title, typography: DSTextStyle.headerMedium),
+            const SizedBox(height: DSSpacing.v12),
+            Wrap(
+              spacing: DSSpacing.v8,
+              runSpacing: DSSpacing.v8,
+              children: items.map((item) => DSChip(label: item)).toList(),
+            ),
+          ],
+        ),
       ),
     );
   }

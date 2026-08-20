@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:raffashe/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'animated_icon_button.dart';
 
@@ -12,15 +13,15 @@ class SocialRow extends StatelessWidget {
   final String email = "mailto:raffashedev@gmail.com";
 
   Future<void> _launchURL(BuildContext context, String url) async {
-    final Uri uri = Uri.parse(url);
+    final uri = Uri.parse(url);
+    final l10n = AppLocalizations.of(context);
     try {
       if (await canLaunchUrl(uri)) {
         await launchUrl(uri, mode: LaunchMode.externalApplication);
       } else {
-        throw 'Não foi possível abrir o link: $url';
+        throw l10n.errorCouldNotOpenLink(url);
       }
     } catch (e) {
-      // Verificar se o widget está montado antes de acessar o context
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(e.toString())),
